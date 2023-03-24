@@ -8,7 +8,6 @@ body{
 
 svg{
     display: block; 
-    margin: 200rem auto;
     width: 200rem;
     height: 200rem;
     border: 1rem dashed #ccc;

@@ -1,92 +1,131 @@
-html{
+html {
     font-size: 1px;
 }
 
-body{
+body {
     margin: 0 auto;
 }
 
-svg{
-    display: block; 
+svg {
+    display: block;
     margin: 40rem;
     width: 200rem;
     height: 200rem;
     border: 1rem dashed #ccc;
-    animation: rotate 10s linear 1s 1 normal;
+    animation: rotate 10s linear 1s  normal infinite;
 }
 
-#sun{
-    animation: sun 10s linear 1s 1 normal forwards;
+#sun {
+    animation: sun 10s linear 1s  normal infinite;
 }
 
 
-#moon{
-    opacity: 0;
-    animation: moon 10s linear 1s 1 normal forwards;
+#moon {
+    opacity: 1;
+    transform: translate(80rem, 10rem);
+    animation: rotate 10s linear 1s  normal infinite;
 }
 
-@keyframes rotate{
+#moon1 {
+    opacity: 1;
+    animation: moon-1 10s linear 1s  normal infinite;
+}
+
+@keyframes moon-1 {
     0%{
-        background-color: #fff;
-    }
-
-    40%, 50%{
-        background-color: darkblue;
-    }
-
-    100%{
-        background-color: #fff;
-    }
-}
-
-@keyframes sun{
-    0%{
-        transform: translate(0rem, 0rem);
-    }
-
-    30%{
-        transform: translate(40rem, 0rem);
-    }
-    
-    50%{
-        transform: translate(110rem, 30rem);
         opacity: 0;
     }
 
-    70%{
+    40%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        background-color: #fff;
+        fill: #fff;
+    }
+
+    40%,
+    50% {
+        background-color: darkblue;
+        fill: darkblue;
+    }
+
+    100% {
+        background-color: #fff;
+        fill: #fff;
+    }
+}
+
+@keyframes sun {
+    0% {
+        transform: translate(0rem, 0rem);
+    }
+
+    30% {
+        transform: translate(40rem, 0rem);
+    }
+    40%{
+        opacity: 0;
+    }
+
+    50% {
+        transform: translate(70rem, 10rem);
+        opacity: 0;
+    }
+
+    51% {
+        opacity: 0;
+    }
+
+    70% {
         transform: translate(-40rem, 50rem);
         opacity: 0;
     }
 
-    100%{
+    80% {
+        opacity: 1;
+    }
+
+    100% {
         opacity: 1;
     }
 }
 
 @keyframes moon {
-    0%{
+    0% {
         opacity: 0;
     }
 
-    30%{
+    30% {
         transform: translate(-40rem, 50rem);
         opacity: 0;
     }
 
-    50%{
+    50% {
         transform: translate(0rem, 0rem);
         opacity: 1;
     }
-    70%{
+
+    70% {
         transform: translate(40rem, 0rem);
     }
-    
-    90%{
+
+    90% {
         transform: translate(110rem, 30rem);
         opacity: 0;
     }
 
-    100%{
+    100% {
         opacity: 0;
     }
 }
